@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SKILLLS</title>
-</head>
-<body>
+<%- include('../partials/header') %>
+
     <ul>
         <% skills.forEach(function(s){ %>
 
             <li>
+                <a href="/skills/<%= s.id %>"><%= s.skill %></a> 
                 <%= s.skill %>
                   - 
 
@@ -20,5 +14,4 @@
         <% }) %> 
     </ul>
     
-</body>
-</html>
+<%- include('../partials/footer') %>
